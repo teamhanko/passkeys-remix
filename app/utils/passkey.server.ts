@@ -28,6 +28,5 @@ export async function startServerPasskeyLogin() {
 
 export async function finishServerPasskeyLogin(options: any) {
   const response = await passkeyApi.login.finalize(options);
-  // console.log(response)
   return response;
 }

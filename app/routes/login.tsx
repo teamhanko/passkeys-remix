@@ -1,6 +1,5 @@
-import { ActionFunction, redirect } from "@remix-run/node";
-import { Form } from "@remix-run/react";
-// import { Form, Link } from "@remix-run/react";
+import { ActionFunction } from "@remix-run/node";
+import { Form, useNavigate } from "@remix-run/react";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
@@ -31,6 +30,7 @@ export const action: ActionFunction = async ({ request }) => {
 }
 
 export default function LoginPage() {
+    const navigate = useNavigate();
 
     async function signInWithPasskey() {
         const createOptionsResponse = await fetch("/api/passkeys/login", {
@@ -54,7 +54,7 @@ export default function LoginPage() {
 
         if (response.ok) {
             console.log("user logged in with passkey")
-            // redirect("/dashboard");
+            navigate("/dashboard")
             return;
         }
     }
@@ -100,9 +100,6 @@ export default function LoginPage() {
                             </div>
                             <Button className="mt-4 w-full" onClick={() => signInWithPasskey()}>Passkey</Button>
                         </div>
-                        {/* <div className="mt-4 flex justify-center">
-                            <Link to="/signup" className="text-sm text-muted-foreground hover:text-muted-foreground-hover">Don&apos;t have an account? Sign up</Link>
-                        </div> */}
                     </CardContent>
                 </Card>
             </div>

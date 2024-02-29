@@ -14,7 +14,7 @@ export const action = async ({ request }: { request: Request }) => {
         if (finish) {
             const jwtToken = await finishServerPasskeyLogin(options);
             const userID = await getUserID(jwtToken?.token ?? '');
-            console.log(userID)
+
             return createUserSession({
                 request,
                 userId: userID ?? '',
