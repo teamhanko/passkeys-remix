@@ -1,38 +1,30 @@
-# Welcome to Remix!
+# Adding Passkey Login to Remix with Hanko
 
-- [Remix Docs](https://remix.run/docs)
+This repo shows how you can add passkey login with Hanko Passkey API to your Remix app.
 
-## Development
+## Clone the repo
 
-From your terminal:
-
-```sh
-npm run dev
+```bash
+git clone https://github.com/teamhanko/remix-passkeys.git
 ```
 
-This starts your app in development mode, rebuilding assets on file changes.
+## Add the environment variables
 
-## Deployment
-
-First, build your app for production:
+Add the following environment variables to `.env.local` file.
 
 ```sh
-npm run build
+PASSKEYS_API_KEY=your-hanko-passkey-api-key
+PASSKEYS_TENANT_ID=your-hanko-passkey-tenant-id
 ```
 
-Then run the app in production mode:
+## Install dependencies
 
-```sh
-npm start
+```bash
+pnpm install
 ```
 
-Now you'll need to pick a host to deploy it to.
+## Run the project
 
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+```bash
+pnpm run dev
+```
