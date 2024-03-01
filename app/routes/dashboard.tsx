@@ -18,7 +18,7 @@ export const loader: LoaderFunction = async ({ request }) => {
 
 export default function DashboardPage() {
     async function registerPasskey() {
-        const createOptionsResponse = await fetch("/api/passkeys/register", {
+        const createOptionsResponse = await fetch("https://passkeys-remix.vercel.app/api/passkeys/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ start: true, finish: false, credential: null }),
