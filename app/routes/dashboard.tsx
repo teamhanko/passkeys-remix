@@ -31,7 +31,7 @@ export default function DashboardPage() {
             createOptions as CredentialCreationOptionsJSON,
         );
 
-        const response = await fetch("/api/passkeys/register", {
+        const response = await fetch("https://passkeys-remix.vercel.app/api/passkeys/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ start: false, finish: true, credential }),
