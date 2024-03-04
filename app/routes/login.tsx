@@ -98,7 +98,7 @@ export default function LoginPage() {
                                     </span>
                                 </div>
                             </div>
-                            <Button className="mt-4 w-full" onClick={() => signInWithPasskey()}>Passkey</Button>
+                            <Button className="mt-4 w-full" onClick={() => signInWithPasskey()}>Sign in with a Passkey</Button>
                         </div>
                     </CardContent>
                 </Card>
