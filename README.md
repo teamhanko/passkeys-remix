@@ -49,10 +49,10 @@ pnpm dev
 ## Usage
 
 1. Start the application:
-2. 
+   
    * Access the application by navigating to `http://localhost:3000` in your web browser.
   
-3. Log in with a pre-configured user: Navigate to login page, login with one of the pre-configured users.
+2. Log in with a pre-configured user: Navigate to login page, login with one of the pre-configured users.
 
 ```json
     {
