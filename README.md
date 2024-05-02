@@ -2,6 +2,8 @@
 
 This repository demonstrates how to add passkey login functionality to your Remix app using the Hanko Passkey API. Passkey authentication is a secure and user-friendly alternative to traditional password-based authentication, providing a seamless login experience for users.
 
+For a detailed tutorial on implementing passkey login in your Solid.js app, refer to our blog post: [Adding passkeys to a Remix app](https://www.hanko.io/blog/passkeys-remix)
+
 ![Passkey demo](/passkey.gif)
 
 ## Prerequisites
